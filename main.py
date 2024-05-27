@@ -4,6 +4,7 @@ import sota_data
 
 
 def some_tests():
+	sota_data.load_csv()
 	print(template_render.render_multi_table_tex(sota_data.test_summit_single))
 #	print(template_render.render_sigle_section_tex(sota_data.test_summit_single))
 

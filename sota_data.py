@@ -1,4 +1,6 @@
 import maidenhead
+import pandas as pd
+from io import StringIO
 
 # maidenhead.to_maiden(lat, lon)
 
@@ -12,4 +14,7 @@ test_summit_single = {
 }
 
 def load_csv():
-    pass
+    with open("data/summitslist.csv", encoding="utf-8") as f:
+        note, table_content = f.read().split("\n", maxsplit=1)
+    df = pd.read_csv(StringIO(table_content))
+    print(df)
