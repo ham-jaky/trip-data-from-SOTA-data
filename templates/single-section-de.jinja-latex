@@ -1,0 +1,12 @@
+\subsubsection{{ '{' }}{{ ref }}}
+\begin{table}[h!]
+	\begin{center}
+		\caption{Daten zu {{ ref }}}
+		\label{tab:{{ ref }}}
+		\begin{tabular}{l|c|c|c|c}
+			\textbf{Name} & \textbf{Locator} & \textbf{Alt.} & \textbf{Act.} & \textbf{P.}\\
+			\hline
+			{{ name }} & {{ locator }} & {{ altm }} & {{ activations }} & {{ points }}\\
+		\end{tabular}
+	\end{center}
+\end{table}
