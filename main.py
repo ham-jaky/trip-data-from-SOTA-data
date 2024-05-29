@@ -4,8 +4,12 @@ import sota_data
 
 
 def some_tests():
-	sota_data.load_csv()
-	print(template_render.render_multi_table_tex(sota_data.test_summit_single))
+	x, y = sota_data.load_csv()
+	print(y)
+	data = sota_data.ref_starts_with(x, "DM/HE-0")
+
+	with open("test.txt", "w", encoding="utf-8") as f:
+		f.write(template_render.render_multi_table_tex(*data))
 #	print(template_render.render_sigle_section_tex(sota_data.test_summit_single))
 
 
@@ -16,3 +20,4 @@ def main():
 
 if __name__ == "__main__":
 	main()
+	print("Done ╰(*°▽°*)╯")
