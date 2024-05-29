@@ -42,3 +42,11 @@ def ref_starts_with(summits: list, x: str):
         if summit["SummitCode"].lower().startswith(x):
             selected_summits.append(csv_dict_to_sorted_dict(summit=summit))
     return selected_summits
+
+def refs_in_list(summits: list, ref_list: list):
+    ref_list = [ref.lower() for ref in ref_list]
+    selected_summits = []
+    for summit in summits:
+        if summit["SummitCode"].lower() in ref_list:
+            selected_summits.append(csv_dict_to_sorted_dict(summit=summit))
+    return selected_summits
